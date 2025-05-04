@@ -1,6 +1,6 @@
 {
     "bot": {
-        "token": "MTM1MTc4MDA5NjA0MTY4NTAwMg.GD0OkL.kBlZ590cl3KNm0zsZzvW9sgh6nVs085Nv_OHmo",
+        "token": "",
         "prefix": ".",
         "status": {
             "type": "listening",
