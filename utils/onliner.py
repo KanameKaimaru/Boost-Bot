@@ -2,11 +2,21 @@ import json
 import random
 import threading
 import time
-from config.config import load_config
+import os
 from utils.logger import setup_logger
 from enum import Enum
 import websockets
 import asyncio
+
+def load_config():
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "config.json")
+    try:
+        with open(config_path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Config file not found at {config_path}")
+    except json.JSONDecodeError:
+        raise ValueError(f"Invalid JSON format in {config_path}")
 
 class Status(Enum):
     ONLINE = "online"

@@ -2,8 +2,19 @@ import discord
 import time
 from utils.booster import Booster
 from utils.embed_builder import EmbedBuilder
-from config.config import load_config
+import json
+import os
 import requests
+
+def load_config():
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "config.json")
+    try:
+        with open(config_path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Config file not found at {config_path}")
+    except json.JSONDecodeError:
+        raise ValueError(f"Invalid JSON format in {config_path}")
 
 config = load_config()
 embed_builder = EmbedBuilder()

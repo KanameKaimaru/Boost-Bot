@@ -211,7 +211,6 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 ## 🙏 Acknowledgments
 
 - **Discord.py Community**: For an amazing library and support.
-- **xAI**: Inspiration for building powerful automation tools.
 - **Contributors**: Thanks to everyone who tests and improves the bot!
 
 ---

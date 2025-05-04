@@ -4,9 +4,19 @@ import tls_client
 import json
 import base64
 import threading
-from config.config import load_config
+import os
 from utils.logger import setup_logger
 from utils.captcha import CaptchaSolver
+
+def load_config():
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "config.json")
+    try:
+        with open(config_path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Config file not found at {config_path}")
+    except json.JSONDecodeError:
+        raise ValueError(f"Invalid JSON format in {config_path}")
 
 class Booster:
     def __init__(self):

@@ -5,8 +5,19 @@ from commands.key_commands import (
     delete_keys, get_key_information, key_stats, get_used_key_information,
     get_key, delete_key
 )
-from config.config import load_config
+import json
+import os
 from utils.embed_builder import EmbedBuilder
+
+def load_config():
+    config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "config", "config.json")
+    try:
+        with open(config_path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        raise FileNotFoundError(f"Config file not found at {config_path}")
+    except json.JSONDecodeError:
+        raise ValueError(f"Invalid JSON format in {config_path}")
 
 class KeyManagement(commands.Cog):
     def __init__(self, bot):
