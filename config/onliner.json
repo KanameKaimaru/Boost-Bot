@@ -1,0 +1,25 @@
+{
+    "use_onliner": false,
+    "onliner_paths": ["data/output/success.txt"],
+    "choose_random_online_status_from": ["online", "dnd", "idle", "invisible"],
+    "choose_random_activity_type_from": ["game", "streaming", "listening", "watching", "custom", "competing"],
+    "game": {
+        "choose_random_game_from": ["Minecraft", "Valorant", "Boost Bot Dev"]
+    },
+    "streaming": {
+        "choose_random_name_from": ["Twitch Stream", "YouTube Live"],
+        "choose_random_url_from": ["https://twitch.tv/boostbot", "https://youtube.com/boostbot"]
+    },
+    "listening": {
+        "choose_random_name_from": ["Spotify", "Boost Bot Radio"]
+    },
+    "watching": {
+        "choose_random_name_from": ["Boost Bot Tutorial", "Server Boost Guide"]
+    },
+    "custom": {
+        "choose_random_name_from": ["Boosting Servers!", "Powered by xAI"]
+    },
+    "competing": {
+        "choose_random_name_from": ["Boost Bot Championship"]
+    }
+}

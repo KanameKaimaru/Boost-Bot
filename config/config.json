@@ -1,0 +1,71 @@
+{
+    "bot": {
+        "token": "YOUR_BOT_TOKEN",
+        "prefix": ".",
+        "status": {
+            "type": "listening",
+            "name": "Sea Store | Auto boosting bot",
+            "status": "online",
+            "mobile_status": true,
+            "streaming_url": null
+        }
+    },
+    "customization": {
+        "enabled": true,
+        "use_custom_pfp": true,
+        "use_custom_banner": true,
+        "nickname": "Sea Store",
+        "bio": "Sea Store - Cheapest products that you can find!\n`Sea Store`: https://discord.gg/bPrg698cGV",
+        "thumbnail": "https://example.com/thumbnail.png"
+    },
+    "auto_config": {
+        "use_autoboosting": true,
+        "max_retry_on_failure": 100,
+        "use_customization": true,
+        "default_invite": "https://discord.gg/your_invite"
+    },
+    "sellpass": {
+        "api_key": "",
+        "custom_field_name": "Invite",
+        "boosts_success_note": "Boosts Successful! Thanks For Buying",
+        "boosts_fail_note": "Boosts failed due to an error! Please make sure to join our server for support!"
+    },
+    "sellix": {
+        "invite_field_name": "Server Invite Link",
+        "orders": "https://your_sellix_orders_link"
+    },
+    "sellapp": {
+        "enabled": true,
+        "invite_field_name": "Invite",
+        "customization": {
+            "enabled": true,
+            "nickname_field_name": "Nickname",
+            "bio_field_name": "Bio"
+        }
+    },
+    "webhook": {
+        "url": "https://your_webhook_url",
+        "use_log": true
+    },
+    "server": {
+        "port": 8000,
+        "proxyless": false
+    },
+    "captcha_solver": {
+        "solve_captcha": true,
+        "use": "hcoptcha",
+        "hcoptcha_api_key": "",
+        "capsolver_api_key": "",
+        "csolver_key": "",
+        "dchcaptcha_api_key": "",
+        "max_retries": 5
+    },
+    "permissions": {
+        "owners_ids": ["594396363408670721", "865565502957027368"],
+        "admin_role_ids": ["1366008498357276773"]
+    },
+    "advanced": {
+        "refresh_interval": 120,
+        "advance_mode": true
+    }
+}
